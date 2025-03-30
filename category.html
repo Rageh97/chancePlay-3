@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Category Page</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-xxx"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!--  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="category.css" />
+  </head>
+  <body>
+    <!-- السايدبار -->
+    <div id="sidebar">
+      <div class="p-3 border-b-3 border-indigo-500">القائمة الرئيسية</div>
+      <div class=" flex items-center bg-[var(--main-color)] justify-center border-b-3 border-indigo-500">
+        <img class="w-20" src="/images/logo.png" alt="" />
+      </div>
+      <div class="p-2">
+        <ul class="space-y-4 text-lg">
+          <li>
+            <a href="#" class="block p-2 hover:bg-[var(--main-color)] rounded"
+              ><i class="fa-solid fa-star text-yellow-500 ml-3"></i></i> طرق الدفع</a
+            >
+          </li>
+          <li>
+            <a href="#" class="block p-2 hover:bg-[var(--main-color)] rounded"
+              ><i class="fa-solid fa-star text-yellow-500 ml-3"></i></i>  قيمنا</a
+            >
+          </li>
+           <!-- خدماتنا مع قائمة فرعية -->
+      <li class="relative">
+        <button
+          onclick="toggleSubMenu()"
+          class="flex items-center w-full p-2 hover:bg-[var(--main-color)] rounded text-right"
+        >
+          <i class="fa-solid fa-star text-yellow-500 ml-3"></i>
+          خدماتنا
+          <i class="fa-solid fa-chevron-down mr-auto transition-transform duration-300" id="arrow"></i>
+        </button>
+
+        <!-- القائمة الفرعية -->
+        <ul
+          id="subMenu"
+          class="hidden flex-col mt-2 w-full bg-[#0d0529] rounded-lg overflow-hidden text-sm"
+        >
+          <li>
+            <a href="#" class="block px-4 py-2 hover:bg-[var(--main-color)]"> خدمة 1</a>
+          </li>
+          <li>
+            <a href="#" class="block px-4 py-2 hover:bg-[var(--main-color)]"> خدمة 2</a>
+          </li>
+          <li>
+            <a href="#" class="block px-4 py-2 hover:bg-[var(--main-color)]"> خدمة 3</a>
+          </li>
+        </ul>
+      </li>
+
+          <li>
+            <a href="#" class="block p-2 hover:bg-[var(--main-color)] rounded"
+              ><i class="fa-solid fa-star text-yellow-500 ml-3"></i></i>  تسجيل دخول للمتجر</a
+            >
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay"></div>
+
+    <main class="page-content" id="main-content">
+      <!-- شريط إعلاني -->
+      <div class="sticky top-0 z-50 w-full ">
+        <div
+          class="text-[var(--top-header-text)] bg-[var(--top-header-bg)] text-center py-1 md:py-2 text-sm md:text-lg font-bold w-full"
+        >
+          شريط اعلاني
+        </div>
+
+        <header class="relative z-10   overflow-hidden py-4 px-4 lg:px-20 mb-10">
+         <!-- خلفية شفافة -->
+  <div class="absolute inset-0 bg-[var(--main-color)] opacity-80 z-0"></div>
+
+          <!-- شريط التنقل -->
+          <nav class="flex  items-center justify-between relative z-200 ">
+            <div
+              id="menu-btn"
+              class="text-2xl sm:text-4xl text-white bg-indigo-500 rounded-sm px-2 cursor-pointer"
+            >
+              <i class="fas fa-bars"></i>
+            </div>
+            <div class="text-2xl sm:text-4xl text-indigo-500 cursor-pointer">
+              <i class="fas fa-user"></i>
+            </div>
+          </nav>
+
+          <!-- نصف دائرة + اللوجو -->
+          <div class="flex justify-center relative -mt-13 sm:-mt-14 ">
+            <div
+              class="w-36    h-18 sm:w-50 sm:h-25   rounded-b-full sm:shadow-[inset_0_-20px_20px_#504b65] shadow-[inset_0_-15px_10px_#504b65] relative z-10"
+            >
+              <img
+                src="/images/logo.png"
+                alt="Logo"
+                class="absolute fade-in-down left-1/2 -translate-x-1/2 top-[%7] w-15 sm:w-20   z-20 cursor-pointer"
+              />
+            </div>
+          </div>
+        </header>
+      </div>
+      <!-- ................................... -->
+
+<div class="bg-[#1e163b] p-7 sm:p-10 shadow-lg ">
+  <div class="max-w-3xl  flex items-center justify-center gap-3">
+    <i class="fa-solid fa-star text-yellow-500 text-xl sm:text-2xl "></i>
+    <h2 class="text-xl sm:text-2xl font-bold">عنوان التصنيف</h2>
+    <p class="bg-indigo-500 p-2 text-xs rounded-sm">لا تفوتك عروضنا</p>
+  </div>
+</div>
+
+      <!-- المنتجات الخاصه بالتصنيف -->
+      <section
+      id="best-seller"
+      class="text-[var(--text-color)] bg-[var(--main-color)] text-center relative overflow-hidden mt-10 section-wrapper"
+    >
+     
+
+      <!-- سلايدر البطاقات -->
+      <div
+        class="swiper value-carousel w-full max-w-4xl relative swiper-container"
+      >
+        <div
+          class="swiper-wrapper pb-20 sm:pb-25 pt-15 sm:py-15 flex items-center"
+        >
+          <!-- كل بطاقة -->
+          <div class="swiper-slide flex justify-center">
+            <div
+              class="product-card bg-[#0a0120] text-white w-50 sm:w-65 rounded-2xl border border-white relative overflow-hidden shadow-[0_0_15px_rgba(255,255,255,0.1)]"
+            >
+              <span
+                class="discount-badge absolute top-0 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white text-[9px] px-2 py-0.5 rounded-b-full"
+              >
+                % منتج مخفض
+              </span>
+              <button
+                class="favorite-btn absolute top-2 right-2 text-indigo-500 text-lg"
+              >
+                <i class="fa-solid fa-heart"></i>
+              </button>
+              <div
+                class="product-image bg-[#060042] rounded-2xl h-[200px] flex items-center justify-center mb-2 text-lg"
+              >
+                <img
+                  src="/images/YouTube video editors.jpeg"
+                  class="w-full h-full object-cover"
+                  alt=""
+                />
+              </div>
+              <div
+                class="rating flex items-center justify-start mb-1 absolute left-2 top-43 border rounded-full"
+              >
+                <span
+                  class="bg-[#1e1242] text-xs px-1 py-0.5 rounded-full flex items-center gap-1"
+                >
+                  <i class="fa-solid fa-star text-indigo-500"></i> 4.5
+                </span>
+              </div>
+              <span
+                class="product-category text-[10px] bg-gradient-to-r from-purple-500 to-indigo-500 px-2 py-0.5 rounded-full mb-1 inline-block mx-auto"
+              >
+                تصنيف المنتج
+              </span>
+              <div class="text-center mt-1">
+                <h3 class="product-title text-xs">عنوان المنتج</h3>
+                <p class="product-price text-sm text-white font-bold">$25</p>
+              </div>
+              <button
+                class="cursor-pointer add-to-cart mt-2 mb-2 w-30 py-1 text-xs rounded-lg border border-white text-white"
+              >
+                اضف للسلة
+              </button>
+            </div>
+          </div>
+          <div class="swiper-slide flex justify-center">
+            <div
+              class="product-card bg-[#0a0120] text-white w-50 sm:w-65 rounded-2xl border border-white relative overflow-hidden shadow-[0_0_15px_rgba(255,255,255,0.1)]"
+            >
+              <span
+                class="discount-badge absolute top-0 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white text-[9px] px-2 py-0.5 rounded-b-full"
+              >
+                % منتج مخفض
+              </span>
+              <button
+                class="favorite-btn absolute top-2 right-2 text-indigo-500 text-lg"
+              >
+                <i class="fa-solid fa-heart"></i>
+              </button>
+              <div
+                class="product-image bg-[#060042] rounded-2xl h-[200px] flex items-center justify-center mb-2 text-lg"
+              >
+                <img
+                  src="/images/Boost Your Google Rankings_ Gen Z's Ultimate SEO Guide.jpeg"
+                  class="w-full h-full object-cover"
+                  alt=""
+                />
+              </div>
+              <div
+                class="rating flex items-center justify-start mb-1 absolute left-2 top-43 border rounded-full"
+              >
+                <span
+                  class="bg-[#1e1242] text-xs px-1 py-0.5 rounded-full flex items-center gap-1"
+                >
+                  <i class="fa-solid fa-star text-indigo-500"></i> 4.5
+                </span>
+              </div>
+              <span
+                class="product-category text-[10px] bg-gradient-to-r from-purple-500 to-indigo-500 px-2 py-0.5 rounded-full mb-1 inline-block mx-auto"
+              >
+                تصنيف المنتج
+              </span>
+              <div class="text-center mt-1">
+                <h3 class="product-title text-xs">عنوان المنتج</h3>
+                <p class="product-price text-sm text-white font-bold">$25</p>
+              </div>
+              <button
+                class="cursor-pointer add-to-cart mt-2 mb-2 w-30 py-1 text-xs rounded-lg border border-white text-white"
+              >
+                اضف للسلة
+              </button>
+            </div>
+          </div>
+          <div class="swiper-slide flex justify-center">
+            <div
+              class="product-card bg-[#0a0120] text-white w-50 sm:w-65 rounded-2xl border border-white relative overflow-hidden shadow-[0_0_15px_rgba(255,255,255,0.1)]"
+            >
+              <span
+                class="discount-badge absolute top-0 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white text-[9px] px-2 py-0.5 rounded-b-full"
+              >
+                % منتج مخفض
+              </span>
+              <button
+                class="favorite-btn absolute top-2 right-2 text-indigo-500 text-lg"
+              >
+                <i class="fa-solid fa-heart"></i>
+              </button>
+              <div
+                class="product-image bg-[#060042] rounded-2xl h-[200px] flex items-center justify-center mb-2 text-lg"
+              >
+                <img
+                  src="/images/Fix Your Slow Website!.jpeg"
+                  class="w-full h-full object-cover"
+                  alt=""
+                />
+              </div>
+              <div
+                class="rating flex items-center justify-start mb-1 absolute left-2 top-43 border rounded-full"
+              >
+                <span
+                  class="bg-[#1e1242] text-xs px-1 py-0.5 rounded-full flex items-center gap-1"
+                >
+                  <i class="fa-solid fa-star text-indigo-500"></i> 4.5
+                </span>
+              </div>
+              <span
+                class="product-category text-[10px] bg-gradient-to-r from-purple-500 to-indigo-500 px-2 py-0.5 rounded-full mb-1 inline-block mx-auto"
+              >
+                تصنيف المنتج
+              </span>
+              <div class="text-center mt-1">
+                <h3 class="product-title text-xs">عنوان المنتج</h3>
+                <p class="product-price text-sm text-white font-bold">$25</p>
+              </div>
+              <button
+                class="cursor-pointer add-to-cart mt-2 mb-2 w-30 py-1 text-xs rounded-lg border border-white text-white"
+              >
+                اضف للسلة
+              </button>
+            </div>
+          </div>
+          <div class="swiper-slide flex justify-center">
+            <div
+              class="product-card bg-[#0a0120] text-white w-50 sm:w-65 rounded-2xl border border-white relative overflow-hidden shadow-[0_0_15px_rgba(255,255,255,0.1)]"
+            >
+              <span
+                class="discount-badge absolute top-0 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white text-[9px] px-2 py-0.5 rounded-b-full"
+              >
+                % منتج مخفض
+              </span>
+              <button
+                class="favorite-btn absolute top-2 right-2 text-indigo-500 text-lg"
+              >
+                <i class="fa-solid fa-heart"></i>
+              </button>
+              <div
+                class="product-image bg-[#060042] rounded-2xl h-[200px] flex items-center justify-center mb-2 text-lg"
+              >
+                <img
+                  src="/images/55454.png"
+                  class="w-full h-full object-cover"
+                  alt=""
+                />
+              </div>
+              <div
+                class="rating flex items-center justify-start mb-1 absolute left-2 top-43 border rounded-full"
+              >
+                <span
+                  class="bg-[#1e1242] text-xs px-1 py-0.5 rounded-full flex items-center gap-1"
+                >
+                  <i class="fa-solid fa-star text-indigo-500"></i> 4.5
+                </span>
+              </div>
+              <span
+                class="product-category text-[10px] bg-gradient-to-r from-purple-500 to-indigo-500 px-2 py-0.5 rounded-full mb-1 inline-block mx-auto"
+              >
+                تصنيف المنتج
+              </span>
+              <div class="text-center mt-1">
+                <h3 class="product-title text-xs">عنوان المنتج</h3>
+                <p class="product-price text-sm text-white font-bold">$25</p>
+              </div>
+              <button
+                class="cursor-pointer add-to-cart mt-2 mb-2 w-30 py-1 text-xs rounded-lg border border-white text-white"
+              >
+                اضف للسلة
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+
+      <!-- .............. تقييمات المتجر.............. -->
+      <section
+        id="reviews"
+        class="text-[var(--text-color)] bg-[var(--main-color)] text-center relative overflow-hidden mt-20"
+      >
+        <!-- العنوان والوصف -->
+        <div class="flex items-center justify-between h-20 md:h-50">
+          <img
+            class="colored-draw image-title w-40 sm:w-60 md:w-70 lg:w-90 xl:w-120"
+            src="/images/draw-c.png"
+            alt=""
+          />
+          <div id="reviews-title">
+            <h2
+              class="title text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-2"
+            >
+              تقييمات المتجر
+            </h2>
+            <p
+              class="sub-title text-[10px] sm:text-sm md:text-sm lg:text-lg xl:text-lg text-white-300"
+            >
+              اراء عملائنا الكرام
+            </p>
+          </div>
+          <img
+            class="colored-draw-2 image-title w-40 sm:w-60 md:w-70 lg:w-90 xl:w-120"
+            src="/images/draw.png"
+            alt=""
+          />
+        </div>
+
+        <!-- البطاقات -->
+        <div
+          id="reviews-swiper"
+          class="swiper w-full max-w-6xl client-carousel relative"
+        >
+          <div class="swiper-wrapper py-20 sm:py-30 flex items-center">
+            <!-- بطاقة 1 -->
+            <div id="review-card-1" class="swiper-slide flex justify-center">
+              <div
+                class="bg-[#0d0529] rounded-3xl border border-[#522b93] shadow-md relative transition-all duration-300"
+              >
+                <!-- صورة العميل -->
+                <div class="absolute -top-10 left-1/2 -translate-x-1/2">
+                  <div class="relative">
+                    <img
+                      src="/images/User free icons designed by Uniconlabs.jpeg"
+                      alt="Client"
+                      class="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-4 border-white"
+                    />
+                    <!-- علامة تحقق -->
+                    <img
+                      src="/images/verify.png"
+                      alt="verified"
+                      class="absolute -bottom-1 -right-14 w-4 sm:-right-25 md:-right-18 lg:-right-30"
+                    />
+                    <img
+                      src="/images/quote.png"
+                      alt="quote"
+                      class="absolute -bottom-1 -left-14 w-4 sm:-left-25 md:-left-18 lg:-left-30"
+                    />
+                  </div>
+                </div>
+                <!-- المحتوى -->
+                <div
+                  class="pt-7 md:pt-13 pb-2 px-3 flex items-center gap-1 flex-col justify-center"
+                >
+                  <div class="whitespace-normal w-full max-w-xs">
+                    <h3 class="font-bold text-sm sm:text-xl break-words">
+                      اسم العميل
+                    </h3>
+                  </div>
+                  <div class="whitespace-normal w-full max-w-xs">
+                    <p class="text-[10px] mt-2 sm:text-lg break-words">
+                      متجر قوي وجبار ما شاء
+                    </p>
+                  </div>
+                  <!-- التقييم -->
+                  <div class="text-yellow-400 text-2xl sm:text-3xl">★★★★★</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- بطاقة 2 -->
+            <div id="review-card-1" class="swiper-slide flex justify-center">
+              <div
+                class="bg-[#0d0529] rounded-3xl border border-[#522b93] shadow-md relative transition-all duration-300"
+              >
+                <!-- صورة العميل -->
+                <div class="absolute -top-10 left-1/2 -translate-x-1/2">
+                  <div class="relative">
+                    <img
+                      src="/images/User free icons designed by Uniconlabs.jpeg"
+                      alt="Client"
+                      class="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-4 border-white"
+                    />
+                    <!-- علامة تحقق -->
+                    <img
+                      src="/images/verify.png"
+                      alt="verified"
+                      class="absolute -bottom-1 -right-14 w-4 sm:-right-25 md:-right-18 lg:-right-30"
+                    />
+                    <img
+                      src="/images/quote.png"
+                      alt="quote"
+                      class="absolute -bottom-1 -left-14 w-4 sm:-left-25 md:-left-18 lg:-left-30"
+                    />
+                  </div>
+                </div>
+                <!-- المحتوى -->
+                <div
+                  class="pt-7 md:pt-13 pb-2 px-3 flex items-center gap-1 flex-col justify-center"
+                >
+                  <div class="whitespace-normal w-full max-w-xs">
+                    <h3 class="font-bold text-sm sm:text-xl break-words">
+                      اسم العميل
+                    </h3>
+                  </div>
+                  <div class="whitespace-normal w-full max-w-xs">
+                    <p class="text-[10px] mt-2 sm:text-lg break-words">
+                      متجر قوي وجبار ما شاء
+                    </p>
+                  </div>
+                  <!-- التقييم -->
+                  <div class="text-yellow-400 text-2xl sm:text-3xl">★★★★★</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- بطاقة 3 -->
+            <div id="review-card-1" class="swiper-slide flex justify-center">
+              <div
+                class="bg-[#0d0529] rounded-3xl border border-[#522b93] shadow-md relative transition-all duration-300"
+              >
+                <!-- صورة العميل -->
+                <div class="absolute -top-10 left-1/2 -translate-x-1/2">
+                  <div class="relative">
+                    <img
+                      src="/images/User free icons designed by Uniconlabs.jpeg"
+                      alt="Client"
+                      class="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-4 border-white"
+                    />
+                    <!-- علامة تحقق -->
+                    <img
+                      src="/images/verify.png"
+                      alt="verified"
+                      class="absolute -bottom-1 -right-14 w-4 sm:-right-25 md:-right-18 lg:-right-30"
+                    />
+                    <img
+                      src="/images/quote.png"
+                      alt="quote"
+                      class="absolute -bottom-1 -left-14 w-4 sm:-left-25 md:-left-18 lg:-left-30"
+                    />
+                  </div>
+                </div>
+                <!-- المحتوى -->
+                <div
+                  class="pt-7 md:pt-13 pb-2 px-3 flex items-center gap-1 flex-col justify-center"
+                >
+                  <div class="whitespace-normal w-full max-w-xs">
+                    <h3 class="font-bold text-sm sm:text-xl break-words">
+                      اسم العميل
+                    </h3>
+                  </div>
+                  <div class="whitespace-normal w-full max-w-xs">
+                    <p class="text-[10px] mt-2 sm:text-lg break-words">
+                      متجر قوي وجبار ما شاء
+                    </p>
+                  </div>
+                  <!-- التقييم -->
+                  <div class="text-yellow-400 text-2xl sm:text-3xl">★★★★★</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- بطاقة 4 -->
+            <div id="review-card-1" class="swiper-slide flex justify-center">
+              <div
+                class="bg-[#0d0529] rounded-3xl border border-[#522b93] shadow-md relative transition-all duration-300"
+              >
+                <!-- صورة العميل -->
+                <div class="absolute -top-10 left-1/2 -translate-x-1/2">
+                  <div class="relative">
+                    <img
+                      src="/images/User free icons designed by Uniconlabs.jpeg"
+                      alt="Client"
+                      class="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-4 border-white"
+                    />
+                    <!-- علامة تحقق -->
+                    <img
+                      src="/images/verify.png"
+                      alt="verified"
+                      class="absolute -bottom-1 -right-14 w-4 sm:-right-25 md:-right-18 lg:-right-30"
+                    />
+                    <img
+                      src="/images/quote.png"
+                      alt="quote"
+                      class="absolute -bottom-1 -left-14 w-4 sm:-left-25 md:-left-18 lg:-left-30"
+                    />
+                  </div>
+                </div>
+                <!-- المحتوى -->
+                <div
+                  class="pt-7 md:pt-13 pb-2 px-3 flex items-center gap-1 flex-col justify-center"
+                >
+                  <div class="whitespace-normal w-full max-w-xs">
+                    <h3 class="font-bold text-sm sm:text-xl break-words">
+                      اسم العميل
+                    </h3>
+                  </div>
+                  <div class="whitespace-normal w-full max-w-xs">
+                    <p class="text-[10px] mt-2 sm:text-lg break-words">
+                      متجر قوي وجبار ما شاء
+                    </p>
+                  </div>
+                  <!-- التقييم -->
+                  <div class="text-yellow-400 text-2xl sm:text-3xl">★★★★★</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <!-- ..............footer............. -->
+      <footer
+        id="footer"
+        class="text-[var(--text-color)] bg-[var(--main-color)] text-white px-4 mt-5"
+      >
+        <img src="/images/footer.png" class="w-full" alt="" />
+
+        <!-- الشعار -->
+        <div class="flex flex-col items-center space-y-2">
+          <img
+            id="footer-logo"
+            src="/images/logo.png"
+            alt="Chance Play Logo"
+            class="w-40 sm:w-45 md-w-55 lg:w-60"
+          />
+        </div>
+
+        <!-- أيقونات التواصل -->
+        <div
+          id="footer-social-icons"
+          class="cursor-pointer flex items-center justify-center mt-8 flex-wrap"
+        >
+          <img
+            src="images/watsap.png"
+            class="w-16 sm:w-20 md:w-25 lg:w-35"
+            alt=""
+          />
+          <img
+            src="images/watsap.png"
+            class="w-16 sm:w-20 md:w-25 lg:w-35"
+            alt=""
+          />
+          <img
+            src="images/watsap.png"
+            class="w-16 sm:w-20 md:w-25 lg:w-35"
+            alt=""
+          />
+          <img
+            src="images/watsap.png"
+            class="w-16 sm:w-20 md:w-25 lg:w-35"
+            alt=""
+          />
+          <img
+            src="images/watsap.png"
+            class="w-16 sm:w-20 md:w-25 lg:w-35"
+            alt=""
+          />
+          <img
+            src="images/watsap.png"
+            class="w-16 sm:w-20 md:w-25 lg:w-35"
+            alt=""
+          />
+          <img
+            src="images/watsap.png"
+            class="w-16 sm:w-20 md:w-25 lg:w-35"
+            alt=""
+          />
+        </div>
+
+        <!-- المحتوى السفلي -->
+        <div
+          class="flex flex-col md:flex-row justify-center items-start gap-10 mt-12 relative"
+        >
+          <!-- نبذة عن المتجر -->
+          <div
+            id="footer-about"
+            class="md:w-1/2 text-center mx-auto md:text-center space-y-4"
+          >
+            <h3
+              class="border border-white px-4 py-1 inline-block rounded-full text-sm md:text-lg font-semibold mb-2"
+            >
+              نبذة عن المتجر
+            </h3>
+            <p class="leading-loose max-w-md mx-auto text-xs md:text-sm">
+              شانس بلاي هو متجرك الرقمي المتخصص في عالم الألعاب، حيث نوفر لك
+              بطاقات الشحن، العملات الافتراضية، والاشتراكات المميزة لأشهر
+              المنصات بأسعار تنافسية وتسليم سريع وموثوق.
+            </p>
+          </div>
+
+          <!-- خط فاصل -->
+          <div
+            class="hidden md:block w-px h-full bg-gray-500 absolute left-1/2 transform -translate-x-1/2"
+          ></div>
+
+          <!-- روابط تهمك -->
+          <div
+            id="footer-links"
+            class="md:w-1/2 text-center flex flex-col items-center mx-auto justify-center md:text-center space-y-4"
+          >
+            <div>
+              <h3
+                class="border border-white px-4 py-1 rounded-full text-sm md:text-lg font-semibold mb-2"
+              >
+                روابط تهمك
+              </h3>
+            </div>
+            <div
+              class="flex justify-center items-center md:justify-center gap-30"
+            >
+              <ul class="space-y-3">
+                <li class="text-xs md:text-lg">الصفحة التعريفية</li>
+                <li class="text-xs md:text-lg">الصفحة التعريفية</li>
+                <li class="text-xs md:text-lg">الصفحة التعريفية</li>
+                <li class="text-xs md:text-lg">سياسة الاسترجاع</li>
+              </ul>
+              <ul class="space-y-3">
+                <li class="text-xs md:text-lg">الصفحة التعريفية</li>
+                <li class="text-xs md:text-lg">الصفحة التعريفية</li>
+                <li class="text-xs md:text-lg">الصفحة التعريفية</li>
+                <li class="text-xs md:text-lg">سياسة الاسترجاع</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- الحقوق -->
+        <div id="footer-rights" class="mt-10">
+          <p
+            class="bg-[#7b5bff] text-center text-sm py-2 px-4 rounded-t-xl text-white font-bold w-fit mx-auto"
+          >
+            جميع الحقوق محفوظة لدى CHANCE PLAY
+          </p>
+        </div>
+      </footer>
+
+      <!-- أيقونة واتساب ثابتة -->
+      <a
+        href=""
+        target="_blank"
+        class="fixed bottom-2 right-0 md:right-4 z-50 opacity-80 rounded-full p-3 shadow-lg hover:scale-120 transition-transform duration-300"
+      >
+        <img
+          src="/images/wats.png"
+          class="rounded-lg w-12 md:w-12 animate-bounce"
+          alt="WhatsApp"
+        />
+      </a>
+
+      <!--................ end..................... -->
+
+      <!--JAVASCRIPT CODE-->
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="./category.js"></script>
+  </body>
+</html>

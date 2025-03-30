@@ -1,0 +1,166 @@
+:root {
+  --main-color: #0d0529;
+  --text-color: #ffffff;
+  --top-header-bg: #a66bff;
+  --field: #2a2147;
+  --top-header-text: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+/* أنماط السايدبار */
+#sidebar {
+  width: 300px;
+  height: 100vh;
+  background: #2a2147;
+  position: fixed;
+  top: 0;
+  right: -300px; /* مخفي خارج الشاشة */
+  transition: right 0.3s ease;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+}
+
+#sidebar.active {
+  right: 0; /* يظهر عند التنشيط */
+}
+
+/* تأثير Blur للصفحة الرئيسية */
+.page-content {
+  transition: filter 0.4s ease;
+}
+
+.page-content.blur-effect {
+  filter: blur(4px);
+  pointer-events: none;
+}
+
+/* أنماط الـ Overlay */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+
+  transition: opacity 0.4s ease;
+}
+
+#overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* أنماط الزر */
+#menu-btn {
+  transition: transform 0.3s ease;
+}
+
+#menu-btn.active {
+  transform: rotate(90deg);
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* للإنترنت إكسبلورر */
+  scrollbar-width: none; /* لـ Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* لـ Chrome و Safari */
+}
+.colored-draw {
+  background-color: #8b5cf6;
+
+  -webkit-mask-image: url("/images/draw-c.png");
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+
+  mask-image: url("/images/draw-c.png");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+.colored-draw-2 {
+  background-color: #8b5cf6;
+
+  -webkit-mask-image: url("/images/draw.png");
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+
+  mask-image: url("/images/draw.png");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+body {
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+  background-color: var(--main-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+/* ..................... */
+
+/* .........swipers........... */
+
+.swiper-slide {
+  transition: transform 0.3s ease;
+  direction: rtl;
+}
+
+.swiper-wrapper {
+  direction: rtl;
+}
+.swiper-slide-active > div {
+  transform: scale(1.2);
+}
+.swiper-slide-active .subscribtion-swiber {
+  transform: scale(1.35);
+}
+.swiper-pagination-bullet {
+  background: #4f46e5;
+}
+.swiper-pagination-bullet-active {
+  background: #4f46e5 !important;
+}
+
+/*........................................... */
+
+/* ........Animation.................... */
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-down {
+  animation: fade-in-down 2s ease-out forwards;
+}
+
+/* ................responsive.. */
+@media (max-width: 450px) {
+  .title {
+    font-size: 1.2rem;
+  }
+  .sub-title {
+    font-size: 0.7rem;
+  }
+  .image-title {
+    width: 6rem;
+  }
+}
