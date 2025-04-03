@@ -152,208 +152,178 @@
     >
      
 
-      <!-- سلايدر البطاقات -->
+      <!-- حاوية البطاقات -->
       <div
-        class="swiper value-carousel w-full max-w-4xl relative swiper-container"
+        class="pb-20 px-5 sm:px-0 sm:pb-25 pt-15 sm:py-15 grid grid-cols-2 lg:grid-cols-3 place-items-center gap-5 max-w-xl lg:max-w-3xl mx-auto"
       >
-        <div
-          class="swiper-wrapper pb-20 sm:pb-25 pt-15 sm:py-15 flex items-center"
-        >
+      
           <!-- كل بطاقة -->
-          <div class="swiper-slide flex justify-center">
-            <div
-              class="product-card bg-[#0a0120] text-white w-50 sm:w-65 rounded-2xl border border-white relative overflow-hidden shadow-[0_0_15px_rgba(255,255,255,0.1)]"
-            >
-              <span
-                class="discount-badge absolute top-0 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white text-[9px] px-2 py-0.5 rounded-b-full"
-              >
-                % منتج مخفض
-              </span>
-              <button
-                class="favorite-btn absolute top-2 right-2 text-indigo-500 text-lg"
-              >
-                <i class="fa-solid fa-heart"></i>
-              </button>
-              <div
-                class="product-image bg-[#060042] rounded-2xl h-[200px] flex items-center justify-center mb-2 text-lg"
-              >
-                <img
-                  src="/images/YouTube video editors.jpeg"
-                  class="w-full h-full object-cover"
-                  alt=""
-                />
-              </div>
-              <div
-                class="rating flex items-center justify-start mb-1 absolute left-2 top-43 border rounded-full"
-              >
-                <span
-                  class="bg-[#1e1242] text-xs px-1 py-0.5 rounded-full flex items-center gap-1"
-                >
-                  <i class="fa-solid fa-star text-indigo-500"></i> 4.5
-                </span>
-              </div>
-              <span
-                class="product-category text-[10px] bg-gradient-to-r from-purple-500 to-indigo-500 px-2 py-0.5 rounded-full mb-1 inline-block mx-auto"
-              >
-                تصنيف المنتج
-              </span>
-              <div class="text-center mt-1">
-                <h3 class="product-title text-xs">عنوان المنتج</h3>
-                <p class="product-price text-sm text-white font-bold">$25</p>
-              </div>
-              <button
-                class="cursor-pointer add-to-cart mt-2 mb-2 w-30 py-1 text-xs rounded-lg border border-white text-white"
-              >
-                اضف للسلة
-              </button>
+         
+          <div class="product-card bg-[#0a0120] text-white w-full  rounded-2xl border border-white relative overflow-hidden shadow-[0_0_15px_rgba(255,255,255,0.1)] flex flex-col">
+  
+            <!-- شارة الخصم -->
+            <span class="discount-badge absolute top-0 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white text-[9px] px-2 py-0.5 rounded-b-full">
+              % منتج مخفض
+            </span>
+          
+            <!-- زر المفضلة -->
+            <button class="favorite-btn absolute top-2 right-2 text-indigo-500 text-lg">
+              <i class="fa-solid fa-heart"></i>
+            </button>
+          
+            <!-- صورة المنتج -->
+            <div class="product-image bg-[#060042] rounded-2xl aspect-[4/3] flex items-center justify-center mb-2">
+              <img src="/images/YouTube video editors.jpeg" class="w-full h-full object-cover rounded-t-2xl" alt="صورة المنتج">
             </div>
-          </div>
-          <div class="swiper-slide flex justify-center">
-            <div
-              class="product-card bg-[#0a0120] text-white w-50 sm:w-65 rounded-2xl border border-white relative overflow-hidden shadow-[0_0_15px_rgba(255,255,255,0.1)]"
-            >
-              <span
-                class="discount-badge absolute top-0 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white text-[9px] px-2 py-0.5 rounded-b-full"
-              >
-                % منتج مخفض
-              </span>
-              <button
-                class="favorite-btn absolute top-2 right-2 text-indigo-500 text-lg"
-              >
-                <i class="fa-solid fa-heart"></i>
-              </button>
-              <div
-                class="product-image bg-[#060042] rounded-2xl h-[200px] flex items-center justify-center mb-2 text-lg"
-              >
-                <img
-                  src="/images/Boost Your Google Rankings_ Gen Z's Ultimate SEO Guide.jpeg"
-                  class="w-full h-full object-cover"
-                  alt=""
-                />
-              </div>
-              <div
-                class="rating flex items-center justify-start mb-1 absolute left-2 top-43 border rounded-full"
-              >
-                <span
-                  class="bg-[#1e1242] text-xs px-1 py-0.5 rounded-full flex items-center gap-1"
-                >
-                  <i class="fa-solid fa-star text-indigo-500"></i> 4.5
-                </span>
-              </div>
-              <span
-                class="product-category text-[10px] bg-gradient-to-r from-purple-500 to-indigo-500 px-2 py-0.5 rounded-full mb-1 inline-block mx-auto"
-              >
-                تصنيف المنتج
-              </span>
-              <div class="text-center mt-1">
-                <h3 class="product-title text-xs">عنوان المنتج</h3>
-                <p class="product-price text-sm text-white font-bold">$25</p>
-              </div>
-              <button
-                class="cursor-pointer add-to-cart mt-2 mb-2 w-30 py-1 text-xs rounded-lg border border-white text-white"
-              >
-                اضف للسلة
-              </button>
+          
+            <!-- التقييم -->
+            <div class="rating absolute left-2 top-12 border rounded-full bg-[#1e1242] text-xs px-1 py-0.5 flex items-center gap-1">
+              <i class="fa-solid fa-star text-indigo-500"></i> 4.5
             </div>
-          </div>
-          <div class="swiper-slide flex justify-center">
-            <div
-              class="product-card bg-[#0a0120] text-white w-50 sm:w-65 rounded-2xl border border-white relative overflow-hidden shadow-[0_0_15px_rgba(255,255,255,0.1)]"
-            >
-              <span
-                class="discount-badge absolute top-0 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white text-[9px] px-2 py-0.5 rounded-b-full"
-              >
-                % منتج مخفض
-              </span>
-              <button
-                class="favorite-btn absolute top-2 right-2 text-indigo-500 text-lg"
-              >
-                <i class="fa-solid fa-heart"></i>
-              </button>
-              <div
-                class="product-image bg-[#060042] rounded-2xl h-[200px] flex items-center justify-center mb-2 text-lg"
-              >
-                <img
-                  src="/images/Fix Your Slow Website!.jpeg"
-                  class="w-full h-full object-cover"
-                  alt=""
-                />
-              </div>
-              <div
-                class="rating flex items-center justify-start mb-1 absolute left-2 top-43 border rounded-full"
-              >
-                <span
-                  class="bg-[#1e1242] text-xs px-1 py-0.5 rounded-full flex items-center gap-1"
-                >
-                  <i class="fa-solid fa-star text-indigo-500"></i> 4.5
-                </span>
-              </div>
-              <span
-                class="product-category text-[10px] bg-gradient-to-r from-purple-500 to-indigo-500 px-2 py-0.5 rounded-full mb-1 inline-block mx-auto"
-              >
-                تصنيف المنتج
-              </span>
-              <div class="text-center mt-1">
-                <h3 class="product-title text-xs">عنوان المنتج</h3>
-                <p class="product-price text-sm text-white font-bold">$25</p>
-              </div>
-              <button
-                class="cursor-pointer add-to-cart mt-2 mb-2 w-30 py-1 text-xs rounded-lg border border-white text-white"
-              >
-                اضف للسلة
-              </button>
+          
+            <!-- تصنيف المنتج -->
+            <span class="product-category text-[10px] bg-gradient-to-r from-purple-500 to-indigo-500 px-2 py-0.5 rounded-full mb-1 inline-block mx-auto">
+              تصنيف المنتج
+            </span>
+          
+            <!-- تفاصيل المنتج -->
+            <div class="text-center mt-1 flex flex-col gap-1">
+              <h3 class="product-title text-sm font-semibold">عنوان المنتج</h3>
+              <p class="product-price text-md text-white font-bold">$25</p>
             </div>
+          
+            <!-- زر الإضافة إلى السلة -->
+            <button class="add-to-cart mt-3 mb-3 mx-auto w-32 py-2 text-sm font-semibold rounded-lg border border-white text-white transition hover:bg-white hover:text-[#0a0120]">
+              اضف للسلة
+            </button>
+          
           </div>
-          <div class="swiper-slide flex justify-center">
-            <div
-              class="product-card bg-[#0a0120] text-white w-50 sm:w-65 rounded-2xl border border-white relative overflow-hidden shadow-[0_0_15px_rgba(255,255,255,0.1)]"
-            >
-              <span
-                class="discount-badge absolute top-0 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white text-[9px] px-2 py-0.5 rounded-b-full"
-              >
-                % منتج مخفض
-              </span>
-              <button
-                class="favorite-btn absolute top-2 right-2 text-indigo-500 text-lg"
-              >
-                <i class="fa-solid fa-heart"></i>
-              </button>
-              <div
-                class="product-image bg-[#060042] rounded-2xl h-[200px] flex items-center justify-center mb-2 text-lg"
-              >
-                <img
-                  src="/images/55454.png"
-                  class="w-full h-full object-cover"
-                  alt=""
-                />
-              </div>
-              <div
-                class="rating flex items-center justify-start mb-1 absolute left-2 top-43 border rounded-full"
-              >
-                <span
-                  class="bg-[#1e1242] text-xs px-1 py-0.5 rounded-full flex items-center gap-1"
-                >
-                  <i class="fa-solid fa-star text-indigo-500"></i> 4.5
-                </span>
-              </div>
-              <span
-                class="product-category text-[10px] bg-gradient-to-r from-purple-500 to-indigo-500 px-2 py-0.5 rounded-full mb-1 inline-block mx-auto"
-              >
-                تصنيف المنتج
-              </span>
-              <div class="text-center mt-1">
-                <h3 class="product-title text-xs">عنوان المنتج</h3>
-                <p class="product-price text-sm text-white font-bold">$25</p>
-              </div>
-              <button
-                class="cursor-pointer add-to-cart mt-2 mb-2 w-30 py-1 text-xs rounded-lg border border-white text-white"
-              >
-                اضف للسلة
-              </button>
+          
+         
+          
+            <div class="product-card bg-[#0a0120] text-white w-full  rounded-2xl border border-white relative overflow-hidden shadow-[0_0_15px_rgba(255,255,255,0.1)] flex flex-col">
+  
+            <!-- شارة الخصم -->
+            <span class="discount-badge absolute top-0 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white text-[9px] px-2 py-0.5 rounded-b-full">
+              % منتج مخفض
+            </span>
+          
+            <!-- زر المفضلة -->
+            <button class="favorite-btn absolute top-2 right-2 text-indigo-500 text-lg">
+              <i class="fa-solid fa-heart"></i>
+            </button>
+          
+            <!-- صورة المنتج -->
+            <div class="product-image bg-[#060042] rounded-2xl aspect-[4/3] flex items-center justify-center mb-2">
+              <img src="/images/YouTube video editors.jpeg" class="w-full h-full object-cover rounded-t-2xl" alt="صورة المنتج">
             </div>
+          
+            <!-- التقييم -->
+            <div class="rating absolute left-2 top-12 border rounded-full bg-[#1e1242] text-xs px-1 py-0.5 flex items-center gap-1">
+              <i class="fa-solid fa-star text-indigo-500"></i> 4.5
+            </div>
+          
+            <!-- تصنيف المنتج -->
+            <span class="product-category text-[10px] bg-gradient-to-r from-purple-500 to-indigo-500 px-2 py-0.5 rounded-full mb-1 inline-block mx-auto">
+              تصنيف المنتج
+            </span>
+          
+            <!-- تفاصيل المنتج -->
+            <div class="text-center mt-1 flex flex-col gap-1">
+              <h3 class="product-title text-sm font-semibold">عنوان المنتج</h3>
+              <p class="product-price text-md text-white font-bold">$25</p>
+            </div>
+          
+            <!-- زر الإضافة إلى السلة -->
+            <button class="add-to-cart mt-3 mb-3 mx-auto w-32 py-2 text-sm font-semibold rounded-lg border border-white text-white transition hover:bg-white hover:text-[#0a0120]">
+              اضف للسلة
+            </button>
+          
           </div>
-        </div>
-        <div class="swiper-pagination"></div>
+        
+          
+             <div class="product-card bg-[#0a0120] text-white w-full  rounded-2xl border border-white relative overflow-hidden shadow-[0_0_15px_rgba(255,255,255,0.1)] flex flex-col">
+  
+            <!-- شارة الخصم -->
+            <span class="discount-badge absolute top-0 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white text-[9px] px-2 py-0.5 rounded-b-full">
+              % منتج مخفض
+            </span>
+          
+            <!-- زر المفضلة -->
+            <button class="favorite-btn absolute top-2 right-2 text-indigo-500 text-lg">
+              <i class="fa-solid fa-heart"></i>
+            </button>
+          
+            <!-- صورة المنتج -->
+            <div class="product-image bg-[#060042] rounded-2xl aspect-[4/3] flex items-center justify-center mb-2">
+              <img src="/images/YouTube video editors.jpeg" class="w-full h-full object-cover rounded-t-2xl" alt="صورة المنتج">
+            </div>
+          
+            <!-- التقييم -->
+            <div class="rating absolute left-2 top-12 border rounded-full bg-[#1e1242] text-xs px-1 py-0.5 flex items-center gap-1">
+              <i class="fa-solid fa-star text-indigo-500"></i> 4.5
+            </div>
+          
+            <!-- تصنيف المنتج -->
+            <span class="product-category text-[10px] bg-gradient-to-r from-purple-500 to-indigo-500 px-2 py-0.5 rounded-full mb-1 inline-block mx-auto">
+              تصنيف المنتج
+            </span>
+          
+            <!-- تفاصيل المنتج -->
+            <div class="text-center mt-1 flex flex-col gap-1">
+              <h3 class="product-title text-sm font-semibold">عنوان المنتج</h3>
+              <p class="product-price text-md text-white font-bold">$25</p>
+            </div>
+          
+            <!-- زر الإضافة إلى السلة -->
+            <button class="add-to-cart mt-3 mb-3 mx-auto w-32 py-2 text-sm font-semibold rounded-lg border border-white text-white transition hover:bg-white hover:text-[#0a0120]">
+              اضف للسلة
+            </button>
+          
+          </div>
+        
+         
+          <div class="product-card bg-[#0a0120] text-white w-full  rounded-2xl border border-white relative overflow-hidden shadow-[0_0_15px_rgba(255,255,255,0.1)] flex flex-col">
+  
+            <!-- شارة الخصم -->
+            <span class="discount-badge absolute top-0 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white text-[9px] px-2 py-0.5 rounded-b-full">
+              % منتج مخفض
+            </span>
+          
+            <!-- زر المفضلة -->
+            <button class="favorite-btn absolute top-2 right-2 text-indigo-500 text-lg">
+              <i class="fa-solid fa-heart"></i>
+            </button>
+          
+            <!-- صورة المنتج -->
+            <div class="product-image bg-[#060042] rounded-2xl aspect-[4/3] flex items-center justify-center mb-2">
+              <img src="/images/YouTube video editors.jpeg" class="w-full h-full object-cover rounded-t-2xl" alt="صورة المنتج">
+            </div>
+          
+            <!-- التقييم -->
+            <div class="rating absolute left-2 top-12 border rounded-full bg-[#1e1242] text-xs px-1 py-0.5 flex items-center gap-1">
+              <i class="fa-solid fa-star text-indigo-500"></i> 4.5
+            </div>
+          
+            <!-- تصنيف المنتج -->
+            <span class="product-category text-[10px] bg-gradient-to-r from-purple-500 to-indigo-500 px-2 py-0.5 rounded-full mb-1 inline-block mx-auto">
+              تصنيف المنتج
+            </span>
+          
+            <!-- تفاصيل المنتج -->
+            <div class="text-center mt-1 flex flex-col gap-1">
+              <h3 class="product-title text-sm font-semibold">عنوان المنتج</h3>
+              <p class="product-price text-md text-white font-bold">$25</p>
+            </div>
+          
+            <!-- زر الإضافة إلى السلة -->
+            <button class="add-to-cart mt-3 mb-3 mx-auto w-32 py-2 text-sm font-semibold rounded-lg border border-white text-white transition hover:bg-white hover:text-[#0a0120]">
+              اضف للسلة
+            </button>
+          
+          </div>
+         
+       
       </div>
     </section>
 

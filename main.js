@@ -31,37 +31,37 @@ let clientSwiper = new Swiper(".client-carousel", {
     },
   });
   // .....................................
-let valuecarousel = new Swiper(".value-carousel", {
-    centeredSlides: true,
-    slidesPerView: "auto",
-    effect: "slide",
-    paginationClickable: true,
-    loop: true,
-    spaceBetween: 40,
-    slideToClickedSlide: true,
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".value-carousel .swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 1.7,
-      },
-      480: {
-        slidesPerView: 2.2,
-      },
-      768: {
-        slidesPerView: 3,
-      },
-      1024: {
-        slidesPerView: 3,
-      },
-    },
-  });
+// let valuecarousel = new Swiper(".value-carousel", {
+//     centeredSlides: true,
+//     slidesPerView: "auto",
+//     effect: "slide",
+//     paginationClickable: true,
+//     loop: true,
+//     spaceBetween: 40,
+//     slideToClickedSlide: true,
+//     autoplay: {
+//       delay: 2000,
+//       disableOnInteraction: false,
+//     },
+//     pagination: {
+//       el: ".value-carousel .swiper-pagination",
+//       clickable: true,
+//     },
+//     breakpoints: {
+//       0: {
+//         slidesPerView: 1.7,
+//       },
+//       480: {
+//         slidesPerView: 2.2,
+//       },
+//       768: {
+//         slidesPerView: 3,
+//       },
+//       1024: {
+//         slidesPerView: 3,
+//       },
+//     },
+//   });
   // ...................................................
   // sidebar
   document.addEventListener("DOMContentLoaded", function () {
